@@ -7,8 +7,9 @@ Sebuah argumen bisa diinputkan kedalam method ini yang akan berfungsi sebagai ka
 */
 
 // Contoh :
-var arr1 = [1,2,3,4,5,"a","b","c","d","e"];
-console.log(arr1.join());         //hasil: 1,2,3,4,5,a,b,c,d,e
+const buah = ['apel', 'jagung', 'pisang'];
+const hasil = buah.join();
+console.log(hasil); // apel,jagung,pisang
 
 
 /* 
@@ -17,8 +18,13 @@ digunakan untuk membalikkan urutan dari elemen di dalam array. Method ini akan m
 */
 
 // Contoh :
-var arr1 = [1,2,3,4,5,"a","b","c","d","e"];
-console.log(arr1.toString());         //hasil: 1,2,3,4,5,a,b,c,d,e
+const numbers = [5, 4, 3, 2, 1];
+console.log(numbers); // [5, 4, 3, 2, 1]
+
+const numbersReverse = numbers.reverse();
+
+console.log(numbers); // [ 1, 2, 3, 4, 5 ]
+// console.log(numbersReverse); // [ 1, 2, 3, 4, 5 ]
 
 
 /* 
@@ -27,9 +33,9 @@ digunakan untuk mengurutkan elemen dari array. Jika method ini dipanggil tanpa a
 */
 
 // Contoh : 
-var arr2 = [3,5,2,8,,,1,31,22,44,33,11];
-arr2.sort();
-console.log(arr2.toString());         //hasil: 1,11,2,22,3,31,33,4
+const minuman = ['jus', 'air', 'lemon tea', 'teh', 'kopi'];
+minuman.sort();
+console.log(minuman); // [ 'air', 'jus', 'kopi', 'lemon tea', 'teh' ]
 
 
 /* 
@@ -38,9 +44,12 @@ berfungsi untuk ”penyambungan” array. Hasil akhir dari pemanggilan fungsi in
 */
 
 // Contoh :
-var arr1 = [1,2,3,4,"a","b","c","d"];
-console.log(arr1.toString());         //hasil: 1,2,3,4,a,b,c,d
-  
+const huruf = ['a', 'b', 'c'];
+const angka = [1, 2, 3];
+
+const hasilTerakhir = huruf.concat(angka);
+
+console.log(hasilTerakhir); // [ 'a', 'b', 'c', 1, 2, 3 ]
 
 /* 
 5. Array.slice()
@@ -49,12 +58,11 @@ Method slice() ini membutuhkan 2 buah argumen yang berisi posisi index awal dan 
 */
 
 // Contoh :
-var arr1 = [1,2,3,4,"a","b","c","d"];
-  
-//slice dari index ke 2 sampai 4
-var arr2 = arr1.slice(2,4)
-console.log(arr2.toString());         //hasil: 3,4
-  
+const hewan = ['kucing', 'bebek', 'ayam', 'kambing', 'semut'];
+
+const hewanBaru = hewan.slice(1, 4);
+
+console.log(hewanBaru); // [ 'bebek', 'ayam', 'kambing' ]
 
 /* 
 6. Array.splice()
@@ -62,9 +70,11 @@ digunakan untuk memotong array, menambahkan elemen array, bahkan melakukan kedua
 */
 
 // Contoh :
-var arr1 = [1,2,3,4,"a","b","c","d"];
-console.log(arr1.toString());     // hasil: 1,2,3,4,a,b,c,d
-  
+const hari = ['senin', 'selasa', 'ayam', 'bebek', 'rabu', 'kamis'];
+
+hari.splice(2, 2);
+
+console.log(hari); // [ 'senin', 'selasa', 'rabu', 'kamis' ]
 
 /* 
 7. Array.push() 
@@ -72,11 +82,11 @@ digunakan untuk menambahkan dan mengurangi elemen dari array.
 */
 
 // Contoh :
-var arr1 = [];
-  
-arr1.push("a","b","c");
-console.log(arr1.toString());   // hasil: a,b,c
-  
+const mahasiswa = ['budi', 'tanto'];
+const panjang = mahasiswa.push('sukirman', 'sutisno');
+
+console.log(mahasiswa); // [ 'budi', 'tanto', 'sukirman', 'sutisno' ]
+// console.log(panjang); // 4
 
 
 /* 
@@ -85,10 +95,11 @@ kan menambahkan elemen baru diawal array, dan menggeser seluruh eleman yang ada.
 */
 
 // Contoh :
-var arr1 = [];
-  
-arr1.unshift("a","b","c");
-console.log(arr1.toString());   // hasil: a,b,c
+const menu = ['nasgor', 'ayam penyet'];
+
+const jumlahMenu = menu.unshift('Mie Ayam', 'Capcay');
+
+console.log(menu); // [ 'Mie Ayam', 'capcay', 'Nasgor', 'ayam penyet' ]
 
 
 /* 
