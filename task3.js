@@ -1,4 +1,4 @@
-const nilai = [2, 25, 4]
+const nilai = [2, 25, 4, 14, 17, 30, 8]
 
 // Variabel nilaiawal, akhir dan data array
 const SeleksiNilai = (nilaiAwal, nilaiAkhir, dataArray) => {
@@ -24,4 +24,4 @@ const SeleksiNilai = (nilaiAwal, nilaiAkhir, dataArray) => {
     console.log(hasil)
 }
 
-SeleksiNilai(4,17, nilai)
+SeleksiNilai(5,20, nilai)
